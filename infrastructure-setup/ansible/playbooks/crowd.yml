@@ -1,8 +1,6 @@
 ---
 - hosts: "{{ target_hosts | default('tag_hostgroup_crowd_test') }}"
   roles:
-  - role: srsp.oracle-java
-    become: True
+  - role: openjdk
     java_version: 8
-    java_subversion: 181
   - role: local.atlassian_crowd
